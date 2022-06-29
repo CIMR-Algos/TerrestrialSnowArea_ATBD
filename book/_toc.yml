@@ -13,11 +13,11 @@ chapters:
 - file: definitions
   title: Definitions
 - file: introduction_purpose_scope
-  title: Introduction, purpose and scope
+  title: Introduction, Purpose and Scope
 - file: background_justification_algorithm
-  title: Background and justification of selected algorithm
+  title: Background and Justification of Selected Algorithm
 - file: L2_product_definition
-  title: Level-2 product definition
+  title: Level-2 Product Definition
 - file: baseline_algorithm_definition
   title: Baseline Algorithm Definition
 - file: algorithm_input_output_data_definition
@@ -25,9 +25,9 @@ chapters:
 - file: algorithm_performance_assessment
   title: Algorithm Performance Assessment 
 - file: markdown-notebooks
-  title: Notebook comments
+  title: Notebook Comments
 - file: notebooks
-  title: Python notebook placeholder
+  title: Python Notebook Placeholder
 - file: references
   title: References
 - file: annex
