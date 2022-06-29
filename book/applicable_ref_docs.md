@@ -1,7 +1,7 @@
-# Applicable and reference documents
+# Applicable and Reference Documents
 
 List of applicable and reference documents
 
- | ID | applicable documents |
+ | ID | Applicable Documents |
  | --- | ---- |
  |     |      |

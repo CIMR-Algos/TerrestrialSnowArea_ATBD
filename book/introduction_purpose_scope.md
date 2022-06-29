@@ -1,62 +1,9 @@
-# Introduction, purpose and scope
+# Introduction, Purpose and Scope
 
-Here comes an introduction and the purpose and scope of the ATBD
+Snow cover, the second-largest component of the cryosphere, is a crucial factor in the Earth’s energy balance owing to its high albedo {cite:p}`tedesco_2014`. Even though the largest variations in surface albedo are due to seasonal changes in snow cover, seasonal snow occurs predominantly in the Northern Hemisphere only where the maximum extent covers about 50% of the hemispheric land area {cite:p}`rees_2005`. Meltwater from seasonal snow thus has an essential impact on freshwater resources as well as soil moisture {cite:p}`pulliainen_2020`.
 
+Snow monitoring on global scale is an important task considering the essential role of snow cover in the Earth’s climate and the scarcity of ground-based snow observations. Snow has distinctive, frequency-dependent characteristics in terms of microwave emission. This enables the use of brightness temperatures, as measured by spaceborne passive microwave sensors, for the estimation of terrestrial snow area (TSA) through (dry) snow detection.
 
-```{note}
-This is an example of a note
-```
+Dry snow is often detected by the use of multi-spectral and/or multi-polarization methods {cite:p}`tedesco_2014`. Such passive microwave dry snow detection algorithms are commonly based on the Ka and Ku-band {cite:p}`chang_1987,hall_2002`, though some also encorporate further channels provided by CIMR {cite:p}`kelly_2009`.
 
-##### Here is an example of a table with a label
-(gridsCDR)=
- | Id  |  $\mathbf{n}_{x}$  |  $\mathbf{n}_{y}$  |  $\mathbf{A}_{x}$ \[km\] |  $\mathbf{A}_{y}$ \[km\]  | $\mathbf{B}_{x}$ \[km\]  | $\mathbf{B}_{y}$ \[km\]|
- | ----- | ----- | ----- | ------ | ----- | ----- |-----|
- | `nh_ease2-750`, `sh_ease2-750`  |  144 |  144  |   75.0   |    75.0  | -5375.0  |   5375.0|
- | `nh_ease2-250`, `sh_ease2-250`  |  432  | 432   |    25.0 |  25.0 |   -5387.5  |      5387.5|
- | `nh_ease2-125`, `sh_ease2-125`  |  864 |  864    |          12.5   |    12.5     |  -5393.75  |  5393.75|
-
-
-
-
-
-Here is an example of how to label a section:
-
-(seasons)= 
-### Seasons
-
-The  sea-ice drift CDR has global coverage and thus cover all sea ice in
-the Northern Hemisphere (NH) and Southern Hemisphere (SH). The quality
-of the drift estimates vary with season, and it is convenient to refer
-to winter, summer, and transition periods. The definition of these
-periods are in .
-
- |         |  Northern Hemisphere |  Southern Hemisphere|
- | --------| ---------------------| ---------------------|
- | Winter   |      Nov - Apr       |     Apr - Sept |
- | Spring   |         May        |           Oct |
- | Summer   |     Jun - Sept     |        Nov - Feb |
- | Autumn   |         Oct        |           Mar|
-
-
-Here is an example of how to insert and label images:
-
-
-
-```{figure} inv_params_nh_2013-2020_jul.jpg
----
-name: inv_params_nh
----
-Figure caption here!
-```
-
-```{figure} inv_params_sh_2012-2019_dec.jpg
----
-name: inv_params_sh
----
-Second figure caption
-```
-
-These maps of parameters and residuals are saved in a monthly parameter
-file. In Figures {numref}`inv_params_nh` and {numref}`inv_params_sh`
-examples of these parameters are shown.
-
+The purpose of this study as part of CIMR Devalgo is the development of a dry snow detection algorithm tailored to the specifications of CIMR. The scope is to establish a stable initial version using Ka and Ku as core frequency bands, and to prepare a snow dataset for validation and verification purposes. Upon stable performance, X and C-band will be investigated regarding their potential to be included in the algorithm, with the aim to develop a decision tree following the example of {cite:t}`grody_basist_1996`. Ultimately, it is planned to evaluate L-band for the determination of sibnivean soil properties.

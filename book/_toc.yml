@@ -29,7 +29,7 @@ chapters:
 - file: notebooks
   title: Python notebook placeholder
 - file: references
-  title: References (example)
+  title: References
 - file: annex
   title: Annex
 

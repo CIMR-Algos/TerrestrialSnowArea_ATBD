@@ -19,17 +19,19 @@ latex:
 bibtex_bibfiles:
   - references.bib
 
-# Format the citation style
 sphinx:
   config:
+    # Format the citation style
     bibtex_reference_style: author_year
+  extra_extensions:
+    - sphinxcontrib.mermaid
 
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/CIMR-Algos/ATBD-Template  # Online location of your book
+  url: https://github.com/CIMR-Algos/ATBD_TerrestrialSnowArea  # Online location of your book
   path_to_book: docs  # Optional path to your book, relative to the repository root
-  branch: master  # Which branch of the repository should be used when creating links (optional)
+  branch: main  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
