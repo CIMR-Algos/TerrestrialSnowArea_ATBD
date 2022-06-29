@@ -326,7 +326,11 @@ const thebe_selector_output = ".output, .cell_output"
 <h1>Algorithm Input and Output Data Definition (IODD)<a class="headerlink" href="#algorithm-input-and-output-data-definition-iodd" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="input-data">
 <h2>Input data<a class="headerlink" href="#input-data" title="Permalink to this headline">¶</a></h2>
-<p>Subsection text</p>
+<p>Daily Level-2 brightness temperature data are the main input, including the 19 GHz channel of horizontal polarisation and of the 37 GHz channel of both polarisations.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If available, early morning satellite data is preferred as input over late afternoon data in order to minimise effects of liquid water within the snowpack.</p>
+</div>
 </div>
 <div class="section" id="output-data">
 <h2>Output data<a class="headerlink" href="#output-data" title="Permalink to this headline">¶</a></h2>
@@ -338,7 +342,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="ancillary-data">
 <h2>Ancillary data<a class="headerlink" href="#ancillary-data" title="Permalink to this headline">¶</a></h2>
-<p>Subsection text</p>
+<p>Ancillary data include a static water mask in order to have a consist definition of land and water grid cells. Furthermore, latitudes that fall outside the area of interest are masked out in order to avoid false positive snow cells. For the Northern Hemisphere all latitudes at and below 40° N are masked out, and for the Southern Hemisphere latitudes at and below x° S are affected.</p>
 </div>
 </div>
 

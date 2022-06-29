@@ -51,6 +51,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Algorithm Input and Output Data Definition (IODD)" href="algorithm_input_output_data_definition.html" />
@@ -434,7 +436,22 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Subsection Text</p>
 <div class="section" id="mathematical-description">
 <h3>Mathematical description<a class="headerlink" href="#mathematical-description" title="Permalink to this headline">¶</a></h3>
-<p>SubSubsection Text</p>
+<p>The dry snow detection algorithm of the TSA product is based on the approach of <span id="id1">Hall <em>et al.</em> [<a class="reference internal" href="references.html#id2" title="D. Hall, R. Kelly, G. Riggs, A. Chang, and J. Foster. Assessment of the relative accuracy of hemispheric-scale snow-cover maps. Ann. Glaciol., 34:24-30, 2002. doi:10.3189/172756402781817770.">2002</a>]</span> but applies updated empirically derived thresholds as implemented for the EUMETSAT H SAF snow status product H11 <span id="id2">[<a class="reference internal" href="references.html#id3" title="J. Pulliainen, P. Lahtinen, J. Kärnä, and S. Koponen. Algorithm Theoretical Definition Document (ATDD) for Product SN-OBS-2 - Snow Status (Dry/Wet) by Microwave Radiometry. Technical Report H11, EUMETSAT H-SAF, 2010.">Pulliainen <em>et al.</em>, 2010</a>]</span>. The brightness temperature difference between the Ku and Ka-band is used to estimate snow depth (SD) as</p>
+<div class="math notranslate nohighlight">
+\[
+\text{SD} = R_c \cdot (T_B^{18H}-T_B^{37H}),
+\]</div>
+<p>with regression coefficient <span class="math notranslate nohighlight">\(R_c\)</span> of 1.59 cm/K and brightness temperatures <span class="math notranslate nohighlight">\(T_B\)</span>.
+For the algorithm in to detect dry snow, the following thresholds must be met:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\text{SD} &amp;≥ 3.0~\text{cm}\\
+T_B^{37V} &amp;&lt; 255~\text{K}\\
+T_B^{37H} &amp;&lt; 250~\text{K}.
+\end{aligned}
+\end{split}\]</div>
+<p>The use of further CIMR channels for dry snow detection is under investigation.</p>
 </div>
 <div class="section" id="input-data">
 <h3>Input data<a class="headerlink" href="#input-data" title="Permalink to this headline">¶</a></h3>
@@ -442,7 +459,36 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="output-data">
 <h3>Output data<a class="headerlink" href="#output-data" title="Permalink to this headline">¶</a></h3>
-<p>SubSubsection Text</p>
+<p>The snow maps are provided as EASE-Grid 2.0 North and South azimuthal projections, respectively, of 12.5 km resolution and use the pixel values given in <a class="reference internal" href="#tab-tsa-values"><span class="std std-numref">Table 1</span></a>. Data are available for download as NetCDF files in addition the corresponding quick-look PNG files.</p>
+<table class="table" id="tab-tsa-values">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Snow map values</span><a class="headerlink" href="#tab-tsa-values" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Label</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-3</p></td>
+<td><p>outside coverage area</p></td>
+</tr>
+<tr class="row-odd"><td><p>-2</p></td>
+<td><p>no data</p></td>
+</tr>
+<tr class="row-even"><td><p>-1</p></td>
+<td><p>open water</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>snow-free land</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>snow-covered land</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="auxiliary-data">
 <h3>Auxiliary data<a class="headerlink" href="#auxiliary-data" title="Permalink to this headline">¶</a></h3>

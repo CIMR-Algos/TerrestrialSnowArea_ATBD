@@ -16,7 +16,7 @@ This is an example of a note
  | `nh_ease2-125`, `sh_ease2-125`  |  864 |  864    |          12.5   |    12.5     |  -5393.75  |  5393.75|
 
 
-Here is a citation, {cite}`brodzik/etal:2012`
+
 
 
 Here is an example of how to label a section:
