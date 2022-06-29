@@ -1,3 +1,3 @@
 # Acronyms
 
-Here follows a formatted list of acronyms
+Here follows a formatted list of acronyms.
