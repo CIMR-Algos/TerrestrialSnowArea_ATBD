@@ -1,3 +1,3 @@
-# Level-2 product definition
+# Level-2 Product Definition
 
 Definition
