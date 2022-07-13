@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: ATBD Template
+title: ATBD TSA
 author: CIMR Devalgo
 logo: logo.jpg
 
@@ -23,9 +23,10 @@ sphinx:
   config:
     # Format the citation style
     bibtex_reference_style: author_year
-  extra_extensions:
-    - sphinxcontrib.mermaid
 
+parse:
+  myst_enable_extensions:
+    - deflist
 
 # Information about where the book exists on the web
 repository:
