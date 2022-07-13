@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Baseline Algorithm Definition &#8212; ATBD Template</title>
+    <title>Baseline Algorithm Definition &#8212; ATBD TSA</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,12 +53,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Algorithm Input and Output Data Definition (IODD)" href="algorithm_input_output_data_definition.html" />
-    <link rel="prev" title="Level-2 product definition" href="L2_product_definition.html" />
+    <link rel="prev" title="Level-2 Product Definition" href="L2_product_definition.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -87,7 +85,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.jpg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">ATBD Template</h1>
+      <h1 class="site-logo" id="site-title">ATBD TSA</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -125,17 +123,17 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="introduction_purpose_scope.html">
-   Introduction, purpose and scope
+   Introduction, Purpose and Scope
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="background_justification_algorithm.html">
-   Background and justification of selected algorithm
+   Background and Justification of Selected Algorithm
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="L2_product_definition.html">
-   Level-2 product definition
+   Level-2 Product Definition
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -155,12 +153,12 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="markdown-notebooks.html">
-   Notebook comments
+   Notebook Comments
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="notebooks.html">
-   Python notebook placeholder
+   Python Notebook Placeholder
   </a>
  </li>
  <li class="toctree-l1">
@@ -279,7 +277,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#level-2-end-to-end-algorithm-functional-flow-diagram">
-   Level-2 end to end algorithm functional flow diagram
+   Level-2 End to End Algorithm Functional Flow Diagram
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -361,7 +359,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#level-2-end-to-end-algorithm-functional-flow-diagram">
-   Level-2 end to end algorithm functional flow diagram
+   Level-2 End to End Algorithm Functional Flow Diagram
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -430,19 +428,12 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Subsection Text</p>
 </div>
 <div class="section" id="level-2-end-to-end-algorithm-functional-flow-diagram">
-<h2>Level-2 end to end algorithm functional flow diagram<a class="headerlink" href="#level-2-end-to-end-algorithm-functional-flow-diagram" title="Permalink to this headline">¶</a></h2>
-<div class="mermaid">
-            graph TD
-  A[L1B CIMR Brightness Temperatures] --&gt;|remapping| B[Gridded Brightness Temperatures];
-  B --&gt; C(Dry Snow Detection);
-  C --&gt; D[L2 TSA Maps];
- 
-  subgraph Optional Masking
-  direction TB
-  E(Land/Water)
-  F(Latitude)
-  end
-        </div></div>
+<h2>Level-2 End to End Algorithm Functional Flow Diagram<a class="headerlink" href="#level-2-end-to-end-algorithm-functional-flow-diagram" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="flow-diagram">
+<a class="reference internal image-reference" href="_images/L2-algorithm.png"><img alt="_images/L2-algorithm.png" src="_images/L2-algorithm.png" style="width: 450px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Functional flow diagram of the Level-2 end to end algorithm of the TSA product.</span><a class="headerlink" href="#flow-diagram" title="Permalink to this image">¶</a></p>
+</div>
+</div>
 <div class="section" id="functional-description-of-each-algorithm-step">
 <h2>Functional description of each Algorithm step<a class="headerlink" href="#functional-description-of-each-algorithm-step" title="Permalink to this headline">¶</a></h2>
 <p>Step 1: Mapping of L1B brightness temperatures to swath projection.</p>
@@ -451,21 +442,17 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Step 4: Optional masking e.g. land/water or latitude masking.</p>
 <div class="section" id="mathematical-description">
 <h3>Mathematical description<a class="headerlink" href="#mathematical-description" title="Permalink to this headline">¶</a></h3>
-<p>The dry snow detection algorithm of the TSA product is based on the approach of <span id="id1">Hall <em>et al.</em> [<a class="reference internal" href="references.html#id2" title="D. Hall, R. Kelly, G. Riggs, A. Chang, and J. Foster. Assessment of the relative accuracy of hemispheric-scale snow-cover maps. Ann. Glaciol., 34:24-30, 2002. doi:10.3189/172756402781817770.">2002</a>]</span> but applies updated empirically derived thresholds as implemented for the EUMETSAT H SAF snow status product H11 <span id="id2">[<a class="reference internal" href="references.html#id3" title="J. Pulliainen, P. Lahtinen, J. Kärnä, and S. Koponen. Algorithm Theoretical Definition Document (ATDD) for Product SN-OBS-2 - Snow Status (Dry/Wet) by Microwave Radiometry. Technical Report H11, EUMETSAT H-SAF, 2010.">Pulliainen <em>et al.</em>, 2010</a>]</span>. The brightness temperature difference between the Ku and Ka-band is used to estimate snow depth (SD) as</p>
+<p>The dry snow detection algorithm of the TSA product is based on the approach of <span id="id1">Hall <em>et al.</em> [<a class="reference internal" href="references.html#id3" title="D. Hall, R. Kelly, G. Riggs, A. Chang, and J. Foster. Assessment of the relative accuracy of hemispheric-scale snow-cover maps. Ann. Glaciol., 34:24-30, 2002. doi:10.3189/172756402781817770.">2002</a>]</span> but applies updated empirically derived thresholds as implemented for the EUMETSAT H SAF snow status product H11 <span id="id2">[<a class="reference internal" href="references.html#id4" title="J. Pulliainen, P. Lahtinen, J. Kärnä, and S. Koponen. Algorithm Theoretical Definition Document (ATDD) for Product SN-OBS-2 - Snow Status (Dry/Wet) by Microwave Radiometry. Technical Report H11, EUMETSAT H-SAF, 2010.">Pulliainen <em>et al.</em>, 2010</a>]</span>. The brightness temperature difference between the Ku and Ka-band is used to estimate snow depth (SD) as</p>
 <div class="math notranslate nohighlight" id="equation-tb-diff">
-<span class="eqno">(1)<a class="headerlink" href="#equation-tb-diff" title="Permalink to this equation">¶</a></span>\[
-\text{SD} = R_c \cdot (T_B^{18H}-T_B^{37H}),
-\]</div>
-<p>with regression coefficient <span class="math notranslate nohighlight">\(R_c\)</span> of 1.59 cm/K and brightness temperatures <span class="math notranslate nohighlight">\(T_B\)</span>, where the superscripts show the frequency and polarisation.
+<span class="eqno">(1)<a class="headerlink" href="#equation-tb-diff" title="Permalink to this equation">¶</a></span>\[\text{SD} = R_c \cdot (T_B^{18H}-T_B^{37H}),\]</div>
+<p>with regression coefficient $R_c$ of 1.59 cm/K and brightness temperatures $T_B$, where the superscripts indicate the frequency and polarisation.
 For the algorithm in <a class="reference internal" href="#equation-tb-diff">(1)</a> to detect dry snow, the following thresholds must be met:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
+\[\begin{split}\begin{aligned}
 \text{SD} &amp;≥ 3.0~\text{cm}\\
 T_B^{37V} &amp;&lt; 255~\text{K}\\
 T_B^{37H} &amp;&lt; 250~\text{K}.
-\end{aligned}
-\end{split}\]</div>
+\end{aligned}\end{split}\]</div>
 <p>The use of further CIMR channels for dry snow detection is under investigation.</p>
 </div>
 <div class="section" id="input-data">
@@ -511,7 +498,7 @@ T_B^{37H} &amp;&lt; 250~\text{K}.
 </div>
 <div class="section" id="ancillary-data">
 <h3>Ancillary data<a class="headerlink" href="#ancillary-data" title="Permalink to this headline">¶</a></h3>
-<p>SubSubsection Text</p>
+<p>Ancillary data include a static water mask in order to have a consist definition of land and water grid cells. Furthermore, latitudes that fall outside the area of interest are masked out in order to avoid false positive snow cells. For the Northern Hemisphere all latitudes at and below 40° N are masked out, and for the Southern Hemisphere latitudes at and below x° S are affected.</p>
 </div>
 <div class="section" id="validation-process">
 <h3>Validation process<a class="headerlink" href="#validation-process" title="Permalink to this headline">¶</a></h3>
@@ -549,7 +536,7 @@ T_B^{37H} &amp;&lt; 250~\text{K}.
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Level-2 product definition</p>
+            <p class="prev-next-title">Level-2 Product Definition</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="algorithm_input_output_data_definition.html" title="next page">
