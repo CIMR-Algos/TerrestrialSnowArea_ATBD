@@ -23,7 +23,17 @@ Volume scattering, the dominating type of attenuation as observed for dry snow, 
 Air acts as a surrounding medium for the ice particles with diameters on the order of millimetres.
 For propagating waves with wavelengths noticeably larger than this, snow appears as a homogeneous medium with only absorptive effects.
 For wavelengths of similar magnitude, the ice particles act as scatterers due to the inhomogeneous dielectric properties between the ice itself and the air background {cite:p}`ulaby_long_2014`.
+This scattering mechanism is shown in {numref}`emission-scattering`.
 The phenomenon that the emissivity of snow-covered ground decreases with increasing frequency, is unique among land cover types {cite:p}`matzler_1994`.
+
+
+```{figure} ./figures/emission-scattering.png
+--- 
+name: emission-scattering
+width: 350px
+---
+Schematic of the microwave emission from snow characterised by volume scattering.
+```
 
 % scattering aspects
 The amount of volume scattering is directly influenced by the snow's properties.
@@ -55,19 +65,27 @@ Nonetheless, either polarisation have been applied for dry snow detection.
 
 % snow wetness
 In contrast to dry snow and regardless of polarisation, consistently wet or melting snow can be hardly discriminated from bare wet or frozen soil.
-The liquid water content significantly reduces, if not eliminates, the snowpack's transparency to microwave radiation.
+The liquid water content significantly reduces, if not eliminates, the snowpack's transparency to microwave radiation as shown in {numref}`emission-ambient`.
 The scattering signature as such is thus not present, and the emissivity spectrum of wet snow is hence drastically different to the one of dry snow {cite:p}`matzler_1994`.
 The internal wetness of snow also affects the capability of scattering signatures for snow accumulation monitoring.
 Even though PMW remote sensing can be used to retrieve accumulation rates in the dry-snow zone of ice sheets, it is greatly limited by spatial and temporal variability in liquid water and refrozen subsurface ice structures {cite:p}`tedesco_2014`, and relies highly on in situ measurements {cite:p}`rees_2005`.
 An additional classification for glacial ice might need to be introduced since common scattering signatures for snow detection can result in a lack of scattering for large regions of Greenland and Antarctica {cite:p}`grody_basist_1996`.
 
-% challenges: water, mountains
+```{figure} ./figures/emission-ambient.png
+--- 
+name: emission-ambient
+width: 350px
+---
+Schematic of the effect of ambient conditions (vegetation and liquid water content) on the microwave emission from snow.
+```
+
+% challenges: water, mountains, vegetation
 Liquid water similarly poses a key challenge in form of water bodies.
 For that reason, large waters such as oceans and large lakes are commonly masked out, as are pixels that cover large percentages of water e.g. in coastal areas or lakeland.
 Another problem is that most of the Earth’s seasonal snow cover occurs in complex landscapes {cite:p}`rees_2005`.
 Firstly, mountainous terrain hinders dry snow detection since large spatial differences in snow depth are to be expected: whilst deep snow eventually reaches saturation depth, the signal of areas with shallow snow prevails which may be mistaken for bare ground.
 And secondly, the changes in slope gradient within the sensor footprint cause variations in (local) observation angle and thus in view-dependent emissivity which again may be falsely identified as snow-free conditions {cite:p}`tedesco_2014`.
-Besides, overlying vegetation reflects and emits upwelling microwave radiation {cite:p}`grody_basist_1996`
+Besides, overlying vegetation reflects upwelling microwave radiation and emits some on its own {cite:p}`grody_basist_1996`, as illustrated in {numref}`emission-ambient`.
 Snow cover in forested areas consequently presents higher emissivities and brightness temperatures than in unforested regions.
 
 ## Algorithm Selection 
