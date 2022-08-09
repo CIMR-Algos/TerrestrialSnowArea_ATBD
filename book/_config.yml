@@ -27,6 +27,9 @@ sphinx:
 parse:
   myst_enable_extensions:
     - deflist
+    - dollarmath
+
+
 
 # Information about where the book exists on the web
 repository:
