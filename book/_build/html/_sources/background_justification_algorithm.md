@@ -104,7 +104,7 @@ Due to significant differences in microwave emission between wet and dry snow {c
 ```
 
 PMW dry snow detection algorithms are known to generally underestimate the presence of snow due to their sensitivity to vegetation and liquid water content of the snowpack, among other reasons.
-This can be seen in {numref}`difference` which illustrates the difference between snow extent as estimated by GlobSnow and H SAF with respect to snow maps of the Interactive Multisensor Snow and Ice Mapping System (IMS).
+This can be seen in {numref}`difference` which illustrates the difference between snow extent as estimated by GlobSnow and H SAF for brightness temperatures of SSM/I and SSMIS, with respect to snow maps of the Interactive Multisensor Snow and Ice Mapping System (IMS).
 Daily IMS maps are based on multiple input sources and human analysis, and serve therefore as reliable reference for global snow extent instead of ground-truth though only pointwise weather station measurements.
 A negative number indicates the days per pixel for which the PMW algorithm flags 'snow-free' and IMS data flags 'snow', and vice versa for a positive number.
 The difference shown in {numref}`difference` then gives the final sum of both cases for every day of the investigated time period, and thus shows the tendency of an algorithm to under- or overestimate (and not necessarily the actual number of days that it deviates from IMS data).
