@@ -1,6 +1,12 @@
 # Definitions
 
 ```{glossary}
+Copernicus Imaging Microwave Radiometer
+  The Copernicus Imaging Microwave Radiometer or CIMR mission by ESA includes a wide-swath conically-scanning multi-frequency microwave radiometer with launch planned for 2028.
+
+Dry snow
+  Snowpack with liquid water content equal to zero
+
 Scattering signature
   Difference in brightness temperature between two different frequency channels for snow-covered ground due to volume scattering.
 

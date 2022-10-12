@@ -24,10 +24,6 @@ chapters:
   title: Algorithm Input and Output Data Definition (IODD)
 - file: algorithm_performance_assessment
   title: Algorithm Performance Assessment 
-- file: markdown-notebooks
-  title: Notebook Comments
-- file: notebooks
-  title: Python Notebook Placeholder
 - file: references
   title: References
 - file: annex
