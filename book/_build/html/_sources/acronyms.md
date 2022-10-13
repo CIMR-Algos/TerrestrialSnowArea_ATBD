@@ -3,7 +3,10 @@
 AD
 : Applicable Document
 
-ATBD
+AMSR2
+: Advanced Microwave Scanning Radiometer 2
+
+TBD
 : Algorithm Theoretical Basis Document
 
 CIMR
@@ -32,6 +35,9 @@ IODD
 
 PMW
 : Passive microwave
+
+RRDP
+: Round Robin Data Package
 
 RD
 : Reference Document
