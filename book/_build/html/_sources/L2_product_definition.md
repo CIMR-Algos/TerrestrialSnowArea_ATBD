@@ -5,7 +5,7 @@ The product is provided in netCDF format and contains the following variables:
 
 (product_variables)=
 | Variable name | Unit |
-| --- | ---- | ---| 
+| --- | ---- |
 | `terrestrial_snow_area` | 1 |
 | `terrestrial_snow_area nan_flag` | 1 | 
 
