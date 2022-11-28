@@ -7,6 +7,9 @@ Copernicus Imaging Microwave Radiometer
 Dry snow
   Snowpack with liquid water content equal to zero
 
+Equal-Area Scalable Earth Grid
+  Northern and Southern Hemisphere projections of EASE-Grid 2.0 are based on polar aspect Lambert azimuthal equal-area projections, as defined by {cite:t}`brodzik_2012`.
+
 Scattering signature
   Difference in brightness temperature between two different frequency channels for snow-covered ground due to volume scattering.
 

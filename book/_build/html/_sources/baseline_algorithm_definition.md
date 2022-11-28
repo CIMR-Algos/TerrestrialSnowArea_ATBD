@@ -4,17 +4,18 @@ The TSA algorithm is based on dry snow detection as described by {cite:t}`hall_2
 
 ## Retrieval Method
 
-NA
+N/a
 
 
 ## Forward Model
 
-NA
+N/a
 
 
 ## CIMR Level-1B Re-sampling Approach
 
-To be defined.
+Resampling approach to be defined.
+Subsequent reprojection to EASE-Grid 2.0 polar projections of the Northern Hemisphere (NH) or Southern Hemisphere (SH).
 
 
 ## Algorithm Assumptions and Simplifications
@@ -75,11 +76,11 @@ L2 TSA maps are provided, with 0 for 'snow-free land', 1 for 'snow-covered land'
 
 ### Auxiliary data
 
-Auxiliary data for Step 4 include information on open water in order to have a consistent definition of land and water grid cells. Besides, the TSA product is only concerned with snow cover in the Northern Hemisphere, where seasonal terrestrial snow predominantly occurs. Latitudes at and below 40° N are masked out, as those historically do not experience snow cover, in order to avoid false positive snow cells.
+Auxiliary data for Step 4 include information on open water in order to have a consistent definition of land and water grid cells. Besides, the TSA product is only concerned with snow cover in the Northern Hemisphere, where seasonal terrestrial snow predominantly occurs. Latitudes at and below 40° N are masked out, as those historically do not experience snow cover, in order to avoid false positive snow cells. Masking for the Southern Hemisphere tbc.
 
 ### Ancillary data
 
-NA
+N/a
 
 ### Validation process
 

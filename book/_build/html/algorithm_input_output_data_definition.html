@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Algorithm Input and Output Data Definition (IODD) &#8212; ATBD TSA</title>
+    <title>Algorithm Input and Output Data Definition (IODD) &#8212; CIMR L2 Terrestrial Snow Area ATBD v1</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -26,6 +26,8 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles.css" />
+    <link rel="stylesheet" type="text/css" href="_static/watermark.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -52,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Algorithm Performance Assessment (Version 2 ATBD)" href="algorithm_performance_assessment.html" />
+    <link rel="next" title="References" href="references.html" />
     <link rel="prev" title="Baseline Algorithm Definition" href="baseline_algorithm_definition.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -97,7 +99,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.jpg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">ATBD TSA</h1>
+      <h1 class="site-logo" id="site-title">CIMR L2 Terrestrial Snow Area ATBD v1</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -160,18 +162,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="algorithm_performance_assessment.html">
-   Algorithm Performance Assessment (Version 2 ATBD)
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="references.html">
    References
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="annex.html">
-   Annex
   </a>
  </li>
 </ul>
@@ -238,7 +230,7 @@ title="Fullscreen mode"
   </span>
 
 </button>
-<a href="https://github.com/CIMR-Algos/ATBD_TerrestrialSnowArea"
+<a href="https://github.com/CIMR-Algos/TerrestrialSnowArea_ATBD"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="bottom"
@@ -390,7 +382,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="algorithm-input-and-output-data-definition-iodd">
 <h1>Algorithm Input and Output Data Definition (IODD)<a class="headerlink" href="#algorithm-input-and-output-data-definition-iodd" title="Permalink to this headline">#</a></h1>
-<p>The processing of the TSA product requires TB data in swath projection. Even though the application of auxiliary data is not mandatory, it is highly recommended to mask out known water bodies and latitudes which do not experience snow cover.</p>
+<p>The processing of the TSA product requires resampling of TB data from the instrument grid to EASE-Grid 2.0 of Northern or Southern Hemisphere projection. Even though the application of auxiliary data is not mandatory, it is highly recommended to mask out known water bodies and latitudes which historically do not experience snow cover.</p>
 <section id="input-data">
 <h2>Input data<a class="headerlink" href="#input-data" title="Permalink to this headline">#</a></h2>
 <p>Daily Level-2 brightness temperature data are the main input, requiring data of the Ku-band of horizontal polarisation and of the Ka-band of both polarisations.
@@ -407,13 +399,13 @@ Brightness temperature data of all other bands and polarisations may be necessar
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>L1B TB Ku-band</p></td>
-<td><p>L1B Brightness Temperatures at 18.7 GHZ (H polarisation)</p></td>
-<td><p>full swath or swath section (Nscans, Npos)</p></td>
+<tr class="row-even"><td><p>L1B TB Ku-band  </p></td>
+<td><p>L1B Brightness Temperatures at 18.7 GHZ <br> (H polarisation)</p></td>
+<td><p>Full swath or swath section <br> (Nscans,Npos)</p></td>
 </tr>
-<tr class="row-odd"><td><p>L1B TB Ka-band</p></td>
-<td><p>L1B Brightness Temperatures at 36.5 GHZ (H and V polarisation)</p></td>
-<td><p>full swath or swath section (Nscans, Npos)</p></td>
+<tr class="row-odd"><td><p>L1B TB Ka-band  </p></td>
+<td><p>L1B Brightness Temperatures at 36.5 GHZ <br> (H and V polarisation)</p></td>
+<td><p>Full swath or swath section <br> (Nscans,Npos)</p></td>
 </tr>
 </tbody>
 </table>
@@ -429,12 +421,12 @@ Brightness temperature data of all other bands and polarisations may be necessar
 </thead>
 <tbody>
 <tr class="row-even"><td><p>L2 TSA</p></td>
-<td><p>Terrestrial Snow Area: 0 for ‘snow-free’, 1 for ‘snow-covered land’, NaN otherwise</p></td>
-<td><p>full swath or swath section (Nscans, Npos)</p></td>
+<td><p>Terrestrial Snow Area: <br> 0 for ‘snow-free’, 1 for ‘snow-covered land’</p></td>
+<td><p>EASE-Grid 2.0 NH/SH <br> (nx,ny)</p></td>
 </tr>
-<tr class="row-odd"><td><p>NaN Flag</p></td>
-<td><p>Reason for NaN value: ‘no data’, ‘open water’</p></td>
-<td><p>full swath or swath section (Nscans, Npos)</p></td>
+<tr class="row-odd"><td><p>Status Flag  </p></td>
+<td><p>Pixel status: <br> ‘no data’, ‘valid, ‘open water’, ‘no snow possible’</p></td>
+<td><p>EASE-Grid 2.0 NH/SH <br> (nx,ny)</p></td>
 </tr>
 </tbody>
 </table>
@@ -442,13 +434,13 @@ Brightness temperature data of all other bands and polarisations may be necessar
 <section id="auxiliary-data">
 <h2>Auxiliary data<a class="headerlink" href="#auxiliary-data" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Land/water information (collocated to swath)</p></li>
-<li><p>Latitude information of the Northern Hemisphere (collocated to swath)</p></li>
+<li><p>Land/water information (EASE-Grid 2.0)</p></li>
+<li><p>Latitude information (EASE-Grid 2.0)</p></li>
 </ul>
 </section>
 <section id="ancillary-data">
 <h2>Ancillary data<a class="headerlink" href="#ancillary-data" title="Permalink to this headline">#</a></h2>
-<p>NA</p>
+<p>N/a</p>
 </section>
 </section>
 
@@ -486,10 +478,10 @@ Brightness temperature data of all other bands and polarisations may be necessar
             <p class="prev-next-title">Baseline Algorithm Definition</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="algorithm_performance_assessment.html" title="next page">
+    <a class='right-next' id="next-link" href="references.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Algorithm Performance Assessment (Version 2 ATBD)</p>
+        <p class="prev-next-title">References</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -500,9 +492,16 @@ Brightness temperature data of all other bands and polarisations may be necessar
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By CIMR Devalgo<br/>
+    By Lina Zschenderlein and Kari Luojus, Finnish Meteorological Institute<br/>
   
-      &copy; Copyright 2022.<br/>
+    <div class="extra_footer">
+      <p>
+This ATBD was developed in the context of the ESA-funded CIMR DEVALGO study (2022-2024) (contract 4000137493).
+<br>
+ESA is not responsible in any way for the content of this document.
+</p>
+
+    </div>
 </p>
         </footer>
     </div>

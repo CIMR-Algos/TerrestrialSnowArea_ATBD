@@ -1,6 +1,6 @@
 # Background and Justification of Selected Algorithm
 
-[//]: # (snow)
+% snow
 Snow is a mixture of ice crystals, liquid water and air. Over time, the density of a snow pack increases due to compaction by wind and gravity, and due to thermal metamorphism {cite:p}`rees_2005`.
 Its internal structure is characterised primarily by the grain or crystal size, and by the form and orientation of those crystals.
 A further property is snow wetness which refers to the liquid water content.

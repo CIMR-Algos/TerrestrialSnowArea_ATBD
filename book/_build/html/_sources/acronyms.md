@@ -9,8 +9,14 @@ AMSR2
 TBD
 : Algorithm Theoretical Basis Document
 
+CF
+: NetCDF Climate and Forecast Metadata Conventions
+
 CIMR
 : {term}`Copernicus Imaging Microwave Radiometer`
+
+EASE-Grid
+: {term}`Equal-Area Scalable Earth Grid`
 
 ECMWF
 : European Centre for Medium-Range Weather Forecasts
@@ -33,6 +39,9 @@ IMS
 IODD
 : Input and Output Data Definition
 
+NH
+: Northern Hemisphere
+
 PMW
 : Passive microwave
 
@@ -44,6 +53,9 @@ RD
 
 SD
 : Snow depth
+
+SH
+: Southern Hemisphere
 
 SSM/I
 : Special Sensor Microwave/Imager

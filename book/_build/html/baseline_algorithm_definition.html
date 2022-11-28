@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Baseline Algorithm Definition &#8212; ATBD TSA</title>
+    <title>Baseline Algorithm Definition &#8212; CIMR L2 Terrestrial Snow Area ATBD v1</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -26,6 +26,8 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles.css" />
+    <link rel="stylesheet" type="text/css" href="_static/watermark.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -99,7 +101,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.jpg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">ATBD TSA</h1>
+      <h1 class="site-logo" id="site-title">CIMR L2 Terrestrial Snow Area ATBD v1</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -162,18 +164,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="algorithm_performance_assessment.html">
-   Algorithm Performance Assessment (Version 2 ATBD)
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="references.html">
    References
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="annex.html">
-   Annex
   </a>
  </li>
 </ul>
@@ -240,7 +232,7 @@ title="Fullscreen mode"
   </span>
 
 </button>
-<a href="https://github.com/CIMR-Algos/ATBD_TerrestrialSnowArea"
+<a href="https://github.com/CIMR-Algos/TerrestrialSnowArea_ATBD"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="bottom"
@@ -476,18 +468,19 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="baseline-algorithm-definition">
 <h1>Baseline Algorithm Definition<a class="headerlink" href="#baseline-algorithm-definition" title="Permalink to this headline">#</a></h1>
-<p>The TSA algorithm is based on dry snow detection as described by <span id="id1">Hall <em>et al.</em> [<a class="reference internal" href="references.html#id3" title="D. Hall, R. Kelly, G. Riggs, A. Chang, and J. Foster. Assessment of the relative accuracy of hemispheric-scale snow-cover maps. Ann. Glaciol., 34:24-30, 2002. doi:10.3189/172756402781817770.">2002</a>]</span> and <span id="id2">Pulliainen <em>et al.</em> [<a class="reference internal" href="references.html#id4" title="J. Pulliainen, P. Lahtinen, J. Kärnä, and S. Koponen. Algorithm Theoretical Definition Document (ATDD) for Product SN-OBS-2 - Snow Status (Dry/Wet) by Microwave Radiometry. Technical Report H11, EUMETSAT H-SAF, 2010.">2010</a>]</span>. It is an empirical algorithm, based on the underlying physical principle that microwave radiation of higher frequencies is attenuated by snow cover due to volume scattering, while lower frequencies remain mostly unaffected.</p>
+<p>The TSA algorithm is based on dry snow detection as described by <span id="id1">Hall <em>et al.</em> [<a class="reference internal" href="references.html#id2" title="D. Hall, R. Kelly, G. Riggs, A. Chang, and J. Foster. Assessment of the relative accuracy of hemispheric-scale snow-cover maps. Ann. Glaciol., 34:24-30, 2002. doi:10.3189/172756402781817770.">2002</a>]</span> and <span id="id2">Pulliainen <em>et al.</em> [<a class="reference internal" href="references.html#id3" title="J. Pulliainen, P. Lahtinen, J. Kärnä, and S. Koponen. Algorithm Theoretical Definition Document (ATDD) for Product SN-OBS-2 - Snow Status (Dry/Wet) by Microwave Radiometry. Technical Report H11, EUMETSAT H-SAF, 2010.">2010</a>]</span>. It is an empirical algorithm, based on the underlying physical principle that microwave radiation of higher frequencies is attenuated by snow cover due to volume scattering, while lower frequencies remain mostly unaffected.</p>
 <section id="retrieval-method">
 <h2>Retrieval Method<a class="headerlink" href="#retrieval-method" title="Permalink to this headline">#</a></h2>
-<p>NA</p>
+<p>N/a</p>
 </section>
 <section id="forward-model">
 <h2>Forward Model<a class="headerlink" href="#forward-model" title="Permalink to this headline">#</a></h2>
-<p>NA</p>
+<p>N/a</p>
 </section>
 <section id="cimr-level-1b-re-sampling-approach">
 <h2>CIMR Level-1B Re-sampling Approach<a class="headerlink" href="#cimr-level-1b-re-sampling-approach" title="Permalink to this headline">#</a></h2>
-<p>To be defined.</p>
+<p>Resampling approach to be defined.
+Subsequent reprojection to EASE-Grid 2.0 polar projections of the Northern Hemisphere (NH) or Southern Hemisphere (SH).</p>
 </section>
 <section id="algorithm-assumptions-and-simplifications">
 <h2>Algorithm Assumptions and Simplifications<a class="headerlink" href="#algorithm-assumptions-and-simplifications" title="Permalink to this headline">#</a></h2>
@@ -514,7 +507,7 @@ title="Print to PDF"
 </ul>
 <section id="mathematical-description">
 <h3>Mathematical description<a class="headerlink" href="#mathematical-description" title="Permalink to this headline">#</a></h3>
-<p>The dry snow detection algorithm of the TSA product (Step 2) is based on the approach of <span id="id3">Hall <em>et al.</em> [<a class="reference internal" href="references.html#id3" title="D. Hall, R. Kelly, G. Riggs, A. Chang, and J. Foster. Assessment of the relative accuracy of hemispheric-scale snow-cover maps. Ann. Glaciol., 34:24-30, 2002. doi:10.3189/172756402781817770.">2002</a>]</span> but applies updated empirically derived thresholds as implemented for the EUMETSAT H SAF snow status product H11 <span id="id4">[<a class="reference internal" href="references.html#id4" title="J. Pulliainen, P. Lahtinen, J. Kärnä, and S. Koponen. Algorithm Theoretical Definition Document (ATDD) for Product SN-OBS-2 - Snow Status (Dry/Wet) by Microwave Radiometry. Technical Report H11, EUMETSAT H-SAF, 2010.">Pulliainen <em>et al.</em>, 2010</a>]</span>. The brightness temperature difference between the Ku and Ka-band is used to estimate snow depth (SD) as</p>
+<p>The dry snow detection algorithm of the TSA product (Step 2) is based on the approach of <span id="id3">Hall <em>et al.</em> [<a class="reference internal" href="references.html#id2" title="D. Hall, R. Kelly, G. Riggs, A. Chang, and J. Foster. Assessment of the relative accuracy of hemispheric-scale snow-cover maps. Ann. Glaciol., 34:24-30, 2002. doi:10.3189/172756402781817770.">2002</a>]</span> but applies updated empirically derived thresholds as implemented for the EUMETSAT H SAF snow status product H11 <span id="id4">[<a class="reference internal" href="references.html#id3" title="J. Pulliainen, P. Lahtinen, J. Kärnä, and S. Koponen. Algorithm Theoretical Definition Document (ATDD) for Product SN-OBS-2 - Snow Status (Dry/Wet) by Microwave Radiometry. Technical Report H11, EUMETSAT H-SAF, 2010.">Pulliainen <em>et al.</em>, 2010</a>]</span>. The brightness temperature difference between the Ku and Ka-band is used to estimate snow depth (SD) as</p>
 <div class="math notranslate nohighlight" id="equation-tb-diff">
 <span class="eqno">(1)<a class="headerlink" href="#equation-tb-diff" title="Permalink to this equation">#</a></span>\[\text{SD} = R_c \cdot (T_B^{18H}-T_B^{37H}),\]</div>
 <p>with regression coefficient <span class="math notranslate nohighlight">\(R_c\)</span> of 1.59 cm/K and brightness temperatures <span class="math notranslate nohighlight">\(T_B\)</span>, where the superscripts indicate the frequency and polarisation.
@@ -537,16 +530,16 @@ T_B^{37H} &amp;&lt; 250~\text{K}.
 </section>
 <section id="auxiliary-data">
 <h3>Auxiliary data<a class="headerlink" href="#auxiliary-data" title="Permalink to this headline">#</a></h3>
-<p>Auxiliary data for Step 4 include information on open water in order to have a consistent definition of land and water grid cells. Besides, the TSA product is only concerned with snow cover in the Northern Hemisphere, where seasonal terrestrial snow predominantly occurs. Latitudes at and below 40° N are masked out, as those historically do not experience snow cover, in order to avoid false positive snow cells.</p>
+<p>Auxiliary data for Step 4 include information on open water in order to have a consistent definition of land and water grid cells. Besides, the TSA product is only concerned with snow cover in the Northern Hemisphere, where seasonal terrestrial snow predominantly occurs. Latitudes at and below 40° N are masked out, as those historically do not experience snow cover, in order to avoid false positive snow cells. Masking for the Southern Hemisphere tbc.</p>
 </section>
 <section id="ancillary-data">
 <h3>Ancillary data<a class="headerlink" href="#ancillary-data" title="Permalink to this headline">#</a></h3>
-<p>NA</p>
+<p>N/a</p>
 </section>
 <section id="validation-process">
 <h3>Validation process<a class="headerlink" href="#validation-process" title="Permalink to this headline">#</a></h3>
 <p>The Level-2 TSA product is validated using brightness temperatures from operational instruments, e.g. AMSR2, which are collocated and temporally matched to exhaustive in situ SD observations from weather stations across the Northern Hemisphere.
-Main sources for SD measurements are the European Centre for Medium-Range Weather Forecasts (ECMWF) and the Global Historical Climatology Network <span id="id5">[<a class="reference internal" href="references.html#id18" title="M. Menne, I. Durre, R. Vose, B. Gleason, and T. Houston. An Overview of the Global Historical Climatology Network-Daily Database. Journal of Atmospheric and Oceanic Technology, 29(7):897–910, 2012. doi:10.1175/JTECH-D-11-00103.1.">Menne <em>et al.</em>, 2012</a>]</span>. Those are complemented by observations of the World Data Center of the All-Russia Research Institute of Hydrometeorological Information <span id="id6">[<a class="reference internal" href="references.html#id19" title="O. Bulygina, P. Groisman, V. Razuvaev, and N. Korshunova. Changes in snow cover characteristics over Northern Eurasia since 1966. Environmental Research Letters, 6(4):045204, 2011. doi:10.1088/1748-9326/6/4/045204.">Bulygina <em>et al.</em>, 2011</a>]</span>, of the Meteorological Service of Canada, and from across the continental United States <span id="id7">[<a class="reference internal" href="references.html#id20" title="J. Dyer and T. Mote. Spatial variability and trends in observed snow depth over North America. Geophysical Research Letters, 33(16):L16503, 2006. doi:10.1029/2006GL027258.">Dyer and Mote, 2006</a>]</span>. The observations encompass both snow and snow-free conditions for thorough validation of both true positive and true negative classifications. The validation dataset follows closely the structure of the Round Robin Data Package (RRDP) <span id="id8">[<a class="reference internal" href="references.html#id17" title="L. Pedersen, R. Saldo, S. Kern, and R. Tonboe. Sea Ice Concentration (SIC) Round Robin Data Package (RRDP). Round Robin Data Package Manual, Version 3, ESA, 2021.">Pedersen <em>et al.</em>, 2021</a>]</span>.</p>
+Main sources for SD measurements are the European Centre for Medium-Range Weather Forecasts (ECMWF) and the Global Historical Climatology Network <span id="id5">[<a class="reference internal" href="references.html#id17" title="M. Menne, I. Durre, R. Vose, B. Gleason, and T. Houston. An Overview of the Global Historical Climatology Network-Daily Database. Journal of Atmospheric and Oceanic Technology, 29(7):897–910, 2012. doi:10.1175/JTECH-D-11-00103.1.">Menne <em>et al.</em>, 2012</a>]</span>. Those are complemented by observations of the World Data Center of the All-Russia Research Institute of Hydrometeorological Information <span id="id6">[<a class="reference internal" href="references.html#id18" title="O. Bulygina, P. Groisman, V. Razuvaev, and N. Korshunova. Changes in snow cover characteristics over Northern Eurasia since 1966. Environmental Research Letters, 6(4):045204, 2011. doi:10.1088/1748-9326/6/4/045204.">Bulygina <em>et al.</em>, 2011</a>]</span>, of the Meteorological Service of Canada, and from across the continental United States <span id="id7">[<a class="reference internal" href="references.html#id19" title="J. Dyer and T. Mote. Spatial variability and trends in observed snow depth over North America. Geophysical Research Letters, 33(16):L16503, 2006. doi:10.1029/2006GL027258.">Dyer and Mote, 2006</a>]</span>. The observations encompass both snow and snow-free conditions for thorough validation of both true positive and true negative classifications. The validation dataset follows closely the structure of the Round Robin Data Package (RRDP) <span id="id8">[<a class="reference internal" href="references.html#id16" title="L. Pedersen, R. Saldo, S. Kern, and R. Tonboe. Sea Ice Concentration (SIC) Round Robin Data Package (RRDP). Round Robin Data Package Manual, Version 3, ESA, 2021.">Pedersen <em>et al.</em>, 2021</a>]</span>.</p>
 <p>The main metric used for validation is classification accuracy, including daily as well as monthly and total mean accuracy values.
 By binning observation classes according to in situ SD, the ability of the TSA product to map dry snow for varying snow depth can be evaluated.</p>
 </section>
@@ -601,9 +594,16 @@ By binning observation classes according to in situ SD, the ability of the TSA p
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By CIMR Devalgo<br/>
+    By Lina Zschenderlein and Kari Luojus, Finnish Meteorological Institute<br/>
   
-      &copy; Copyright 2022.<br/>
+    <div class="extra_footer">
+      <p>
+This ATBD was developed in the context of the ESA-funded CIMR DEVALGO study (2022-2024) (contract 4000137493).
+<br>
+ESA is not responsible in any way for the content of this document.
+</p>
+
+    </div>
 </p>
         </footer>
     </div>
