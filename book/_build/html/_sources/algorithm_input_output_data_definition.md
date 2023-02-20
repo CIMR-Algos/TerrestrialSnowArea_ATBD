@@ -1,6 +1,6 @@
 # Algorithm Input and Output Data Definition (IODD)
 
-The processing of the TSA product requires resampling of TB data from the instrument grid to EASE-Grid 2.0 of Northern or Southern Hemisphere projection. Even though the application of auxiliary data is not mandatory, it is highly recommended to mask out known water bodies and latitudes which historically do not experience snow cover. 
+The processing of the TSA product requires resampling of TB data from the instrument grid to EASE-Grid 2.0 of polar projection for the Northern or Southern Hemisphere. Even though the application of auxiliary data is not mandatory, it is highly recommended to mask out known water bodies and latitudes which historically do not experience snow cover. 
 
 ## Input data
 

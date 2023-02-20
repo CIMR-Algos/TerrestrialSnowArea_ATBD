@@ -76,7 +76,7 @@ L2 TSA maps are provided, with 0 for 'snow-free land', 1 for 'snow-covered land'
 
 ### Auxiliary data
 
-Auxiliary data for Step 4 include information on open water in order to have a consistent definition of land and water grid cells. Besides, the TSA product is only concerned with snow cover in the Northern Hemisphere, where seasonal terrestrial snow predominantly occurs. Latitudes at and below 40° N are masked out, as those historically do not experience snow cover, in order to avoid false positive snow cells. Masking for the Southern Hemisphere tbc.
+Auxiliary data for Step 4 include information on open water in order to have a consistent definition of land and water grid cells. Besides, the TSA product is only concerned with snow cover in the Northern Hemisphere, where seasonal terrestrial snow predominantly occurs. Latitudes at and below 40° N are masked out, as those historically do not experience snow cover, in order to avoid false positive snow cells. Masking for the Southern Hemisphere is to be confirmed.
 
 ### Ancillary data
 
